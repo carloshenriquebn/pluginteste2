@@ -1,6 +1,6 @@
 {
   "name": "@carloshenriquebn/pluginteste",
-  "version": "0.1.0",
+  "version": "0.0.4",
   "main": "dist/index.cjs.js",
   "types": "dist-types/src/index.d.ts",
   "files": [
@@ -12,12 +12,15 @@
     "tsc": "tsc"
   },
   "backstage": {
-  "role": "frontend-plugin"
-},
+    "role": "frontend-plugin"
+  },
   "dependencies": {
     "@backstage/core-plugin-api": "^1.10.8",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "devDependencies": {
     "@backstage/cli": "^0.25.0",
