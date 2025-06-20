@@ -1,0 +1,28 @@
+{
+  "name": "@carloshenriquebn/pluginteste",
+  "version": "0.1.0",
+  "main": "dist/index.cjs.js",
+  "types": "dist-types/src/index.d.ts",
+  "files": [
+    "dist",
+    "dist-types"
+  ],
+  "scripts": {
+    "build": "backstage-cli package build",
+    "tsc": "tsc"
+  },
+  "backstage": {
+  "role": "frontend-plugin"
+},
+  "dependencies": {
+    "@backstage/core-plugin-api": "^1.10.8",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@backstage/cli": "^0.25.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^4.9.0"
+  }
+}
