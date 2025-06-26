@@ -1,18 +1,21 @@
-import { createPlugin, createRoutableExtension } from '@backstage/core-plugin-api';
+import { createRouteRef, createPlugin, createRoutableExtension } from '@backstage/core-plugin-api';
 
+const rootRouteRef = createRouteRef({
+  id: "meuplugin-root"
+});
 const plugin = createPlugin({
   id: "pluginteste",
   routes: {
-    root: {}
+    root: rootRouteRef
   }
 });
 const MeupluginPage = plugin.provide(
   createRoutableExtension({
     name: "MeupluginPage",
     component: () => import('./esm/MeupluginPage-34aec53e.esm.js').then((m) => m.MeupluginPage),
-    mountPoint: {}
+    mountPoint: rootRouteRef
   })
 );
 
-export { MeupluginPage, plugin };
+export { MeupluginPage, plugin, rootRouteRef };
 //# sourceMappingURL=index.esm.js.map
