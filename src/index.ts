@@ -1,11 +1,15 @@
-
 import React from 'react';
-import { createPlugin, createRoutableExtension } from '@backstage/core-plugin-api';
+import { createPlugin, createRoutableExtension, createRouteRef } from '@backstage/core-plugin-api';
+
+// Crie o RouteRef
+export const rootRouteRef = createRouteRef({
+  id: 'meuplugin-root',
+});
 
 export const plugin = createPlugin({
   id: 'pluginteste',
   routes: {
-    root: {} as any,
+    root: rootRouteRef,
   },
 });
 
@@ -13,6 +17,6 @@ export const MeupluginPage = plugin.provide(
   createRoutableExtension({
     name: 'MeupluginPage',
     component: () => import('./components/MeupluginPage').then(m => m.MeupluginPage),
-    mountPoint: {} as any,
+    mountPoint: rootRouteRef,
   }),
 );

@@ -1,6 +1,6 @@
 {
   "name": "@carloshenriquebn/pluginteste",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "dist/index.esm.js",
   "types": "dist-types/src/index.d.ts",
   "files": [
